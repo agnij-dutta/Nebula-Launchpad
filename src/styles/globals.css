@@ -1,0 +1,78 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --background: #0B1120;
+  --text-primary: #F7FAFC;
+  --text-secondary: #A0AEC0;
+  --primary-purple: #805AD5;
+  --primary-purple-hover: #6B46C1;
+}
+
+body {
+  @apply bg-[#0B1120] text-gray-100 min-h-screen;
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+}
+
+/* Gradient Text */
+.text-gradient {
+  @apply bg-clip-text text-transparent bg-gradient-to-r from-purple-400 to-blue-500;
+}
+
+/* Glass Panel */
+.glass-panel {
+  @apply bg-white/5 backdrop-blur-md border border-white/10 rounded-xl p-6 transition-all duration-300;
+}
+
+.glass-panel.card-hover:hover {
+  @apply bg-white/10 border-purple-500/30 transform;
+}
+
+/* Gradient Button */
+.gradient-button {
+  @apply px-6 py-2.5 bg-gradient-to-r from-purple-500 to-blue-500 text-white font-medium rounded-lg 
+         transition-all duration-300 hover:opacity-90 active:opacity-80 disabled:opacity-50 disabled:cursor-not-allowed;
+}
+
+/* Input Fields */
+.input-field {
+  @apply w-full px-4 py-2.5 bg-navy-900 border border-white/10 rounded-lg text-white placeholder-gray-500
+         focus:outline-none focus:border-purple-500 transition-colors duration-200;
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--background);
+}
+
+::-webkit-scrollbar-thumb {
+  @apply bg-white/20 rounded-full;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  @apply bg-white/30;
+}
+
+/* Loading Animation */
+@keyframes pulse {
+  0%, 100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.5;
+  }
+}
+
+.animate-pulse {
+  animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+}
+
+/* Toast Styling */
+.glass-panel.toast {
+  @apply bg-navy-800/90 border-white/10 text-white;
+}

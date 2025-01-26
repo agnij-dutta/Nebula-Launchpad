@@ -1,0 +1,285 @@
+/* Navigation styles */
+.nav-link {
+  @apply relative;
+}
+
+.nav-link::after {
+  content: '';
+  @apply absolute bottom-0 left-0 w-0 h-0.5 bg-blue-500 transition-all duration-300;
+}
+
+.nav-link:hover::after {
+  @apply w-full;
+}
+
+/* Card Components */
+.feature-card {
+  @apply bg-white/5 backdrop-blur-md border border-white/10 rounded-xl p-6
+         hover:bg-white/10 hover:border-purple-500/30 hover:scale-[1.02]
+         transition-all duration-300 cursor-pointer;
+}
+
+.feature-card h3 {
+  @apply text-xl font-semibold mb-2 bg-clip-text text-transparent 
+         bg-gradient-to-r from-purple-400 to-blue-500;
+}
+
+.feature-card p {
+  @apply text-gray-400;
+}
+
+/* Form Components */
+.form-group {
+  @apply space-y-2;
+}
+
+.form-label {
+  @apply block text-sm font-medium text-gray-400;
+}
+
+.form-input {
+  @apply w-full px-4 py-2.5 bg-navy-900 border border-white/10 rounded-lg 
+         text-white placeholder-gray-500 focus:outline-none focus:border-purple-500 
+         transition-colors duration-200;
+}
+
+.form-select {
+  @apply w-full px-4 py-2.5 bg-navy-900 border border-white/10 rounded-lg 
+         text-white focus:outline-none focus:border-purple-500 
+         transition-colors duration-200;
+}
+
+/* Button Variants */
+.btn-primary {
+  @apply px-6 py-2.5 bg-gradient-to-r from-purple-500 to-blue-500 
+         text-white font-medium rounded-lg transition-all duration-300 
+         hover:opacity-90 active:opacity-80 disabled:opacity-50 
+         disabled:cursor-not-allowed;
+}
+
+.btn-secondary {
+  @apply px-6 py-2.5 bg-white/10 text-white font-medium rounded-lg 
+         transition-all duration-300 hover:bg-white/20 active:bg-white/30 
+         disabled:opacity-50 disabled:cursor-not-allowed;
+}
+
+.btn-outline {
+  @apply px-6 py-2.5 border border-purple-500 text-purple-400 font-medium 
+         rounded-lg transition-all duration-300 hover:bg-purple-500/10 
+         active:bg-purple-500/20 disabled:opacity-50 disabled:cursor-not-allowed;
+}
+
+/* Badge Components */
+.badge {
+  @apply inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium;
+}
+
+.badge-purple {
+  @apply bg-purple-500/20 text-purple-300;
+}
+
+.badge-blue {
+  @apply bg-blue-500/20 text-blue-300;
+}
+
+.badge-green {
+  @apply bg-green-500/20 text-green-300;
+}
+
+/* Stat Card */
+.stat-card {
+  @apply bg-white/5 backdrop-blur-md border border-white/10 rounded-xl p-6;
+}
+
+.stat-card .stat-title {
+  @apply text-sm text-gray-400 mb-1;
+}
+
+.stat-card .stat-value {
+  @apply text-2xl font-semibold text-white;
+}
+
+.stat-card .stat-desc {
+  @apply text-sm text-gray-400 mt-1;
+}
+
+/* Loading States */
+.loading-skeleton {
+  @apply animate-pulse bg-white/10 rounded;
+}
+
+/* Transitions */
+.fade-enter {
+  opacity: 0;
+  transform: translateY(10px);
+}
+
+.fade-enter-active {
+  opacity: 1;
+  transform: translateY(0);
+  transition: opacity 300ms, transform 300ms;
+}
+
+.fade-exit {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.fade-exit-active {
+  opacity: 0;
+  transform: translateY(10px);
+  transition: opacity 300ms, transform 300ms;
+}
+
+/* Tooltip */
+.tooltip {
+  @apply invisible absolute bg-navy-800 text-white text-sm px-2 py-1 rounded 
+         -mt-8 -ml-10 opacity-0 transition-all duration-200;
+}
+
+.tooltip-trigger:hover .tooltip {
+  @apply visible opacity-100;
+}
+
+/* Progress Bar */
+.progress-bar {
+  @apply w-full h-2 bg-white/10 rounded-full overflow-hidden;
+}
+
+.progress-bar-fill {
+  @apply h-full bg-gradient-to-r from-purple-500 to-blue-500 
+         transition-all duration-300;
+}
+
+/* Alert Components */
+.alert {
+  @apply p-4 rounded-lg border backdrop-blur-md;
+}
+
+.alert-info {
+  @apply bg-blue-500/10 border-blue-500/30 text-blue-300;
+}
+
+.alert-success {
+  @apply bg-green-500/10 border-green-500/30 text-green-300;
+}
+
+.alert-warning {
+  @apply bg-yellow-500/10 border-yellow-500/30 text-yellow-300;
+}
+
+.alert-error {
+  @apply bg-red-500/10 border-red-500/30 text-red-300;
+}
+
+/* Research project card styles */
+.project-card {
+  @apply bg-white dark:bg-gray-800 rounded-xl p-6 shadow-lg transition-all duration-300;
+}
+
+.project-card:hover {
+  @apply shadow-xl -translate-y-1;
+}
+
+.project-tag {
+  @apply px-3 py-1 rounded-full text-sm font-medium bg-blue-100 dark:bg-blue-900 text-blue-800 dark:text-blue-200;
+}
+
+/* Exchange form styles */
+.exchange-form {
+  @apply bg-white dark:bg-gray-800 rounded-xl p-6 shadow-lg max-w-md mx-auto;
+}
+
+.exchange-input {
+  @apply w-full px-4 py-3 rounded-lg border border-gray-300 focus:border-blue-500 focus:ring-2 focus:ring-blue-200 dark:border-gray-600 dark:bg-gray-700 dark:text-white;
+}
+
+.exchange-button {
+  @apply w-full py-3 rounded-lg bg-gradient-to-r from-blue-500 to-purple-500 text-white font-medium hover:from-blue-600 hover:to-purple-600 transition-all duration-300;
+}
+
+/* Profile styles */
+.profile-header {
+  @apply bg-gradient-to-r from-blue-500 to-purple-500 text-white py-12 rounded-xl mb-8;
+}
+
+.profile-stats {
+  @apply grid grid-cols-1 md:grid-cols-3 gap-6 mb-8;
+}
+
+.stat-card {
+  @apply bg-white dark:bg-gray-800 rounded-xl p-6 text-center;
+}
+
+.stat-value {
+  @apply text-3xl font-bold text-blue-500 dark:text-blue-400 mb-2;
+}
+
+.stat-label {
+  @apply text-gray-600 dark:text-gray-400;
+}
+
+/* Research pool styles */
+.pool-card {
+  @apply bg-white dark:bg-gray-800 rounded-xl p-6 border border-gray-200 dark:border-gray-700 transition-all duration-300;
+}
+
+.pool-card:hover {
+  @apply border-blue-500 dark:border-blue-400 shadow-lg;
+}
+
+.pool-stats {
+  @apply flex justify-between items-center mt-4 text-sm text-gray-600 dark:text-gray-400;
+}
+
+/* Loading animation */
+.loading-spinner {
+  @apply w-6 h-6 border-2 border-gray-300 border-t-blue-500 rounded-full animate-spin;
+}
+
+/* Toast notifications */
+.toast {
+  @apply fixed bottom-4 right-4 px-6 py-3 rounded-lg shadow-lg transform transition-all duration-300;
+}
+
+.toast-success {
+  @apply bg-green-500 text-white;
+}
+
+.toast-error {
+  @apply bg-red-500 text-white;
+}
+
+/* Modal styles */
+.modal-overlay {
+  @apply fixed inset-0 bg-black bg-opacity-50 backdrop-blur-sm flex items-center justify-center z-50;
+}
+
+.modal-content {
+  @apply bg-white dark:bg-gray-800 rounded-xl p-6 max-w-md w-full mx-4 shadow-xl transform transition-all duration-300;
+}
+
+/* Tooltip styles */
+.tooltip {
+  @apply relative inline-block;
+}
+
+.tooltip-text {
+  @apply invisible absolute z-10 px-3 py-2 text-sm text-white bg-gray-900 rounded-lg opacity-0 transition-opacity duration-300;
+  bottom: 125%;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.tooltip:hover .tooltip-text {
+  @apply visible opacity-100;
+}
+
+/* Progress bar */
+.progress-bar {
+  @apply w-full h-2 bg-gray-200 dark:bg-gray-700 rounded-full overflow-hidden;
+}
+
+.progress-fill {
+  @apply h-full bg-gradient-to-r from-blue-500 to-purple-500 transition-all duration-300;
+}
